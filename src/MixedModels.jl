@@ -5,6 +5,8 @@ using BlockArrays
 using DataAPI
 using Distributions
 using GLM
+using Interpolations
+using InvertedIndices
 using LinearAlgebra
 using NLopt
 using Random
@@ -163,6 +165,7 @@ include("linalg.jl")
 include("simulate.jl")
 include("bootstrap.jl")
 include("blockdescription.jl")
+include("profile.jl")
 include("grouping.jl")
 
 end # module
