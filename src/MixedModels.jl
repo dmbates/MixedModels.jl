@@ -22,7 +22,7 @@ using Tables
 
 using LinearAlgebra: BlasFloat, BlasReal, HermOrSym, PosDefException, copytri!
 using Base: Ryu
-using GLM: Link, canonicallink
+using GLM: Link, canonicallink, linkfun, linkinv
 using StatsModels: TableRegressionModel
 
 using StatsFuns: log2π, normccdf
@@ -85,6 +85,7 @@ export @formula,
        fit,
        fit!,
        fitted,
+       fitted!,
        fixef,
        fixefnames,
        formula,
@@ -107,6 +108,7 @@ export @formula,
        parametricbootstrap,
        pirls!,
        predict,
+       predict!,
        pwrss,
        ranef,
        raneftables,
@@ -124,6 +126,7 @@ export @formula,
        shortestcovint,
        sdest,
        setθ!,
+       simulate,
        simulate!,
        sparse,
        sparseL,
@@ -175,6 +178,7 @@ include("linalg/rankUpdate.jl")
 include("linalg/logdet.jl")
 include("linalg.jl")
 include("simulate.jl")
+include("predict.jl")
 include("bootstrap.jl")
 include("blockdescription.jl")
 include("grouping.jl")
